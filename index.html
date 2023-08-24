@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center">
+    <button id="testPrint">print</button>
+</div>
+<script>
+   const button = document.getElementById("testPrint");
+   button.addEventListener("click", () => {
+      console.log("按钮被点击了");
+      let htmlStr = `<div style="width: 50mm;height: 29.5mm;box-sizing: border-box;border: 1px solid black;font-size: 10pt">
+    <div>66666</div>
+    <div>6666677777</div>
+    <div>88888</div>
+    </div>`
+      window.mainApi.myPrint(htmlStr, 50, 30)
+   })
+
+</script>
+</body>
+</html>
